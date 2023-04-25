@@ -1,18 +1,13 @@
 public class Ex2_20 {
     boolean solution(String s) {
-       int countP = 0, countY = 0;
-       String[] array = s.toLowerCase().split("");
+        s = s.toUpperCase();
 
-       for(int i = 0; i < array.length; i++) {
-           if("p".equals(array[i])) {
-               countP++;
-           } else if ("y".equals(array[i])) {
-               countY++;
-           }
-       }
-       if (countP != countY) {
-           return false;
-       }
-       return true;
+        return s.chars().filter(letter ->'P'== letter).count() == s.chars().filter(letter -> 'Y' == letter).count();
+    }
+
+    public static void main(String[] args) {
+        Ex2_20 a = new Ex2_20();
+        boolean b = a.solution("pPpYYydg");
+        System.out.println(b);
     }
 }

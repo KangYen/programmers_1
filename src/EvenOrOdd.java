@@ -1,5 +1,3 @@
-package src;
-
 public class EvenOrOdd {
     String evenOrOdd(int num) {
         return num % 2 == 0 ? "Even" : "Odd";
@@ -12,5 +10,4 @@ public class EvenOrOdd {
         System.out.println("결과 : " + evenOrOdd.evenOrOdd(2));
     }
 }
-
 
